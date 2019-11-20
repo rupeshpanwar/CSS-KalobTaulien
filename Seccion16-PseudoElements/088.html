@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Advanced Selectors</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #cfcfcf;
+            overflow: hidden;
+        }
+        
+        nav{
+            background-color: #fff;
+            border-bottom: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        #body{
+            margin: 0 20px;
+        }
+
+        #page-title{
+            margin: 0 0 25px 0;
+            padding: 0;
+            border-bottom: 1px solid #aaa;
+        }
+
+        #footer{
+            left: 10px;
+            bottom: 10px;
+            position: absolute;
+        }
+
+        #footer a{
+            color: red;
+            text-decoration: none;
+        }
+
+        .block{
+            height: 200px;
+            width: 200px;
+            display: block;
+            margin: 50px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .block::before{
+            display: inline-block;
+            content: ' ';
+            color: #fff;
+            background-color: #8c1515;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <nav>CSS Course</nav>
+    <div id="body">
+        <h1 id="page-title">Pseudo Elements ::Before</h1>
+        <div class="block"></div>
+    </div>
+    <div id="footer">
+        <a href="#">Arkmont.com</a>
+    </div>
+</body>
+</html>
